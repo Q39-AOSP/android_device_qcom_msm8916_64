@@ -71,3 +71,6 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 BOARD_EGL_CFG := device/qcom/msm8916_64/egl.cfg
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+# Add NON-HLOS files for ota upgrade
+ADD_RADIO_FILES := true
+TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
