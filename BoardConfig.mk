@@ -82,7 +82,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 ADD_RADIO_FILES ?= false
 
 # Added to indicate that protobuf-c is supported in this build
-PROTOBUF_SUPPORTED := true
+#PROTOBUF_SUPPORTED := true
 
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 TARGET_USE_KRAIT_PLD_SET := true
