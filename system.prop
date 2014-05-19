@@ -22,9 +22,9 @@ ro.telephony.default_network=5
 debug.sf.hw=0
 debug.egl.hw=0
 debug.gralloc.map_fb_memory=1
-#debug.composition.type=c2d
-#persist.hwc.mdpcomp.enable=true
-#debug.mdpcomp.logs=0
+debug.composition.type=c2d
+persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
@@ -81,4 +81,3 @@ persist.fuse_sdcard=true
 #Set for msm8916
 ro.config.low_ram=true
 ro.kernel.qemu=1
-ro.sf.lcd_density=240
