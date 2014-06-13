@@ -21,7 +21,6 @@ ro.telephony.default_network=5
 
 debug.sf.hw=0
 debug.egl.hw=0
-debug.gralloc.map_fb_memory=1
 debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
@@ -77,7 +76,3 @@ telephony.lteOnCdmaDevice=1
 #Simulate sdcard on /data/media
 #
 persist.fuse_sdcard=true
-
-#Set for msm8916
-ro.config.low_ram=true
-ro.kernel.qemu=1
