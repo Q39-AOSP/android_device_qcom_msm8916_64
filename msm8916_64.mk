@@ -14,7 +14,8 @@ PRODUCT_DEVICE := msm8916_64
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8916 for arm64
 
-PRODUCT_BOOT_JARS += qcmediaplayer
+PRODUCT_BOOT_JARS += qcmediaplayer \
+                     WfdCommon
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
