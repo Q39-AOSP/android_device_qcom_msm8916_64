@@ -94,3 +94,8 @@ service audiod /system/bin/audiod
 on boot
     insmod /system/lib/modules/adsprpc.ko
 
+service wcnss-service /system/bin/wcnss_service
+    class main
+    user system
+    group system wifi radio
+    oneshot
