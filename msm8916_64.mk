@@ -24,6 +24,11 @@ PRODUCT_CHARACTERISTICS := nosdcard
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
+PRODUCT_PACKAGES += \
+    libqcomvisualizer \
+    libqcompostprocbundle
+
+
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/audio_policy.conf:system/etc/audio_policy.conf \
