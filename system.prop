@@ -84,6 +84,34 @@ bluetooth.hfp.client=1
 #
 persist.fuse_sdcard=true
 
+#
+#snapdragon value add features
+#
+ro.qc.sdk.audio.ssr=false
+##fluencetype can be "fluence" or "fluencepro" or "none"
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+#Set for msm8916
+tunnel.audio.encode = false
+#Buffer size in kbytes for compress offload playback
+audio.offload.buffer.size.kb=32
+#use VERY_HIGH_QUALITY for audio resampler
+af.resampler.quality=4
+#Enable offload audio video playback by default
+av.offload.enable=false
+#enable voice path for PCM VoIP by default
+use.voice.path.for.pcm.voip=true
+
+#System property for FM transmitter
+ro.fm.transmitter=false
+#enable dsp gapless mode by default
+audio.offload.gapless.enabled=true
+#Audio voice concurrency related flags
+voice.playback.conc.disabled=true
+voice.record.conc.disabled=true
+voice.voip.conc.disabled=true
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
 #property to enable VDS WFD solution
