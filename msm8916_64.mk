@@ -1,3 +1,4 @@
+TARGET_USES_QCOM_BSP := true
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
