@@ -54,6 +54,9 @@ media.aac_51_output_enabled=true
 #codecs:DivxHD Divx FLAC QCP MP2TS 3G2 DTS AVI ASF AC3 AAC
 mm.enable.qcom_parser=3314291
 
+# Default to AwesomePlayer
+media.stagefright.use-awesome=true
+
 #
 # system props for the data modules
 #
