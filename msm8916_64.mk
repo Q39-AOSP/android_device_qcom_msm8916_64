@@ -22,6 +22,7 @@ PRODUCT_BOOT_JARS += qcmediaplayer \
                      qcom.fmradio \
                      security-bridge \
                      qsb-port
+PRODUCT_BOOT_JARS += vcard
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
