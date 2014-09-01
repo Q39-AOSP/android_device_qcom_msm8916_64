@@ -20,7 +20,6 @@ ro.telephony.default_network=5
 
 debug.sf.hw=0
 debug.egl.hw=0
-debug.composition.type=c2d
 persist.hwc.mdpcomp.enable=true
 debug.mdpcomp.logs=0
 dalvik.vm.heapsize=36m
