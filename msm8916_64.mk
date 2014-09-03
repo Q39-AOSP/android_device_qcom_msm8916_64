@@ -47,6 +47,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += wcnss_service
 
+# MSM IRQ Balancer configuration file
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
