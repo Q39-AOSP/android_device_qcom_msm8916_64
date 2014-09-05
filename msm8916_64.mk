@@ -1,3 +1,5 @@
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
+
 TARGET_USES_QCOM_BSP := true
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
