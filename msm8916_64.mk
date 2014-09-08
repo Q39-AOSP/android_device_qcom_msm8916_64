@@ -45,6 +45,13 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8916_32/mixer_paths_skuk.xml:system/etc/mixer_paths_skuk.xml \
     device/qcom/msm8916_32/mixer_paths.xml:system/etc/mixer_paths.xml
 
+
+#ANT+ stack
+PRODUCT_PACKAGES += \
+    AntHalService \
+    libantradio \
+    antradio_app
+
 PRODUCT_PACKAGES += wcnss_service
 
 #wlan driver
