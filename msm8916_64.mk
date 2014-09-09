@@ -19,7 +19,9 @@ PRODUCT_MODEL := MSM8916 for arm64
 
 PRODUCT_BOOT_JARS += qcmediaplayer \
                      WfdCommon \
-                     qcom.fmradio
+                     qcom.fmradio \
+                     security-bridge \
+                     qsb-port
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
@@ -30,7 +32,6 @@ PRODUCT_PACKAGES += libGLES_android
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcompostprocbundle
-
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
