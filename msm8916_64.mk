@@ -8,7 +8,7 @@ PRODUCT_COPY_FILES += device/qcom/msm8916_32/media/media_profiles_8916.xml:syste
                       device/qcom/msm8916_32/media/media_codecs_8916.xml:system/etc/media_codecs.xml
 endif
 
-TARGET_USES_QCA_NFC := true
+TARGET_USES_QCA_NFC := other
 
 $(call inherit-product, device/qcom/common/common64.mk)
 
