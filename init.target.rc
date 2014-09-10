@@ -94,7 +94,7 @@ service aostlmd /system/bin/aostlmd
    user system
    group system net_raw
 
-service mpdecision /system/bin/mpdecision --avg_comp
+service perfd /system/bin/perfd
    user root
    disabled
 
