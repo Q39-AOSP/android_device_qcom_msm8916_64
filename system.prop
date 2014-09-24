@@ -120,9 +120,5 @@ voice.voip.conc.disabled=true
 persist.debug.wfd.enable=1
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
-
-#selects CoreSight configuration to enable
-persist.debug.coresight.config=stm-events
-
 #property to enable narrow search range for video encoding
 vidc.enc.narrow.searchrange=1
