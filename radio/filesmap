@@ -27,21 +27,21 @@
 
 # filename              partition
 
-NON-HLOS.bin            /dev/block/platform/bootdevice/by-name/modem
+NON-HLOS.bin            /dev/block/bootdevice/by-name/modem
 
-sbl1.mbn                /dev/block/platform/bootdevice/by-name/sbl1
-tz.mbn                  /dev/block/platform/bootdevice/by-name/tz
-hyp.mbn                 /dev/block/platform/bootdevice/by-name/hyp
-rpm.mbn                 /dev/block/platform/bootdevice/by-name/rpm
-emmc_appsboot.mbn       /dev/block/platform/bootdevice/by-name/aboot
+sbl1.mbn                /dev/block/bootdevice/by-name/sbl1
+tz.mbn                  /dev/block/bootdevice/by-name/tz
+hyp.mbn                 /dev/block/bootdevice/by-name/hyp
+rpm.mbn                 /dev/block/bootdevice/by-name/rpm
+emmc_appsboot.mbn       /dev/block/bootdevice/by-name/aboot
 
 # filename + .bak       backup partition
 
-sbl1.mbn.bak            /dev/block/platform/bootdevice/by-name/sbl1bak
-tz.mbn.bak              /dev/block/platform/bootdevice/by-name/tzbak
-rpm.mbn.bak             /dev/block/platform/bootdevice/by-name/rpmbak
-emmc_appsboot.mbn.bak   /dev/block/platform/bootdevice/by-name/abootbak
-hyp.mbn.bak             /dev/block/platform/bootdevice/by-name/hypbak
+sbl1.mbn.bak            /dev/block/bootdevice/by-name/sbl1bak
+tz.mbn.bak              /dev/block/bootdevice/by-name/tzbak
+rpm.mbn.bak             /dev/block/bootdevice/by-name/rpmbak
+emmc_appsboot.mbn.bak   /dev/block/bootdevice/by-name/abootbak
+hyp.mbn.bak             /dev/block/bootdevice/by-name/hypbak
 # For multiple file firmware images that differ from *.mbn and *.bin
 # you can specify filename.* to direct all files to the same location.
 # For example for modem.mdt, modem.b00, modem.b01,... modem.bxx files
