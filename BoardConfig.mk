@@ -86,3 +86,5 @@ TARGET_INIT_VENDOR_LIB := libinit_msm
 
 #add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _64
+
+TARGET_LDPRELOAD := libNimsWrap.so
