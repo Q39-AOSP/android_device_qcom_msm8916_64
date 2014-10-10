@@ -10,6 +10,8 @@ endif
 
 TARGET_USES_QCA_NFC := other
 
+PRODUCT_PROPERTY_OVERRIDES += \
+           dalvik.vm.heapgrowthlimit=128m
 $(call inherit-product, device/qcom/common/common64.mk)
 
 PRODUCT_NAME := msm8916_64
