@@ -103,8 +103,6 @@ tunnel.audio.encode = false
 audio.offload.buffer.size.kb=240
 #Minimum duration for offload playback in secs
 audio.offload.min.duration.secs=30
-#use VERY_HIGH_QUALITY for audio resampler
-af.resampler.quality=4
 #Enable offload audio video playback by default
 av.offload.enable=false
 #enable voice path for PCM VoIP by default
@@ -126,9 +124,5 @@ ro.sys.usb.default.config=diag,serial_smd,rmnet_bam,adb
 persist.debug.wfd.enable=1
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
-
-#selects CoreSight configuration to enable
-persist.debug.coresight.config=stm-events
-
 #property to enable narrow search range for video encoding
 vidc.enc.narrow.searchrange=1
