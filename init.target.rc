@@ -112,14 +112,6 @@ service thermal-engine /system/bin/thermal-engine
    user root
    group root
 
-service security-check1 /sbin/security_boot_check system
-    class core
-    oneshot
-
-service security-check2 /sbin/security_boot_check recovery
-    class core
-    oneshot
-
 service time_daemon /system/bin/time_daemon
    class late_start
    user root
@@ -165,11 +157,6 @@ service imsdatadaemon /system/bin/imsdatadaemon
     group system wifi radio inet net_raw log qcom_diag net_admin
     disabled
 
-service seald /system/bin/seald
-    class late_start
-    user root
-    group system
-
 on property:sys.ims.QMI_DAEMON_STATUS=1
     start imsdatadaemon
 
@@ -195,11 +182,6 @@ on property:init.svc.surfaceflinger=stopped
 
 on property:init.svc.surfaceflinger=running
     start ppd
-
-service ml_daemon /system/bin/ml_daemon
-    class core
-    user root
-    group root
 
 on charger
     wait /dev/block/bootdevice/by-name/system

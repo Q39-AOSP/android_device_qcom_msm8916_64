@@ -24,8 +24,7 @@ PRODUCT_MODEL := MSM8916 for arm64
 PRODUCT_BOOT_JARS += qcmediaplayer \
                      WfdCommon \
                      qcom.fmradio \
-                     security-bridge \
-                     qsb-port
+
 PRODUCT_BOOT_JARS += vcard
 
 # default is nosdcard, S/W button enabled in resource
