@@ -111,3 +111,8 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 endif # TARGET_USES_QCA_NFC
+
+# Add the overlay path
+PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
+        $(PRODUCT_PACKAGE_OVERLAYS)
+
