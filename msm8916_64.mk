@@ -14,6 +14,8 @@ endif
 
 TARGET_USES_QCA_NFC := other
 
+PRODUCT_PROPERTY_OVERRIDES += \
+           dalvik.vm.heapgrowthlimit=128m
 $(call inherit-product, device/qcom/common/common64.mk)
 
 PRODUCT_NAME := msm8916_64
@@ -59,7 +61,8 @@ PRODUCT_PACKAGES += \
     AntHalService \
     libantradio \
     antradio_app
-
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
 PRODUCT_PACKAGES += wcnss_service
 
 # MSM IRQ Balancer configuration file
