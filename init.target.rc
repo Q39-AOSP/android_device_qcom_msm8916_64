@@ -106,6 +106,7 @@ service qseecomd /system/bin/qseecomd
 #   group system net_raw
 
 service perfd /system/bin/perfd
+   class main
    user root
    disabled
 
