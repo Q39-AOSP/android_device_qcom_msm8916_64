@@ -117,6 +117,10 @@ audio.offload.gapless.enabled=true
 voice.playback.conc.disabled=true
 voice.record.conc.disabled=true
 voice.voip.conc.disabled=true
+
+#Set read only default composition for USB
+ro.sys.usb.default.config=diag,serial_smd,rmnet_bam,adb
+
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
 #property to enable VDS WFD solution
