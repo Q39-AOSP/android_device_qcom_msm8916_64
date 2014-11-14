@@ -101,6 +101,7 @@ service aostlmd /system/bin/aostlmd
    group system net_raw
 
 service perfd /system/bin/perfd
+   class main
    user root
    disabled
 
