@@ -6,6 +6,9 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
 
+#QTIC flag
+-include $(QCPATH)/common/config/qtic-config.mk
+
 # media_profiles and media_codecs xmls for 8916
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msm8916_32/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
@@ -117,6 +120,7 @@ PRODUCT_COPY_FILES += \
 endif # TARGET_USES_QCA_NFC
 
 # Add the overlay path
+ifeq ($(strip $(TARGET_USES_QTIC)),true)
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
-
+endif
