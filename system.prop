@@ -27,6 +27,7 @@ dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 debug.mdpcomp.idletime=600
+debug.enable.sglscale=1
 
 #ro.hdmi.enable=true
 #tunnel.decode=true
