@@ -87,3 +87,6 @@ TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_BOARD_SUFFIX := _64
 
 TARGET_LDPRELOAD := libNimsWrap.so
+
+#Enable HW based full disk encryption
+TARGET_HW_DISK_ENCRYPTION := true
