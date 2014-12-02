@@ -124,3 +124,12 @@ ifeq ($(strip $(TARGET_USES_QTIC)),true)
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 endif
+
+#HBTP
+PRODUCT_PACKAGES += hbtp_daemon
+PRODUCT_PACKAGES += libhbtpclient.so
+PRODUCT_PACKAGES += libhbtpfrmwk.so
+PRODUCT_PACKAGES += libhbtparm.so
+PRODUCT_PACKAGES += libafehal.so
+PRODUCT_PACKAGES += hbtp.cfg
+PRODUCT_PACKAGES += hbtpcfg.dat
