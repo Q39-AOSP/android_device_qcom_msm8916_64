@@ -143,7 +143,6 @@ service wcnss-service /system/bin/wcnss_service
     class main
     user system
     group system wifi radio
-    oneshot
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
