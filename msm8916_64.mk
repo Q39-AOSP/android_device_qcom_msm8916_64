@@ -26,6 +26,12 @@ PRODUCT_DEVICE := msm8916_64
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8916 for arm64
 
+# font rendering engine feature switch
+-include $(QCPATH)/common/config/rendering-engine.mk
+ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
+    MULTI_LANG_ENGINE := REVERIE
+endif
+
 PRODUCT_BOOT_JARS += qcmediaplayer \
                      WfdCommon \
                      qcom.fmradio \
@@ -119,6 +125,10 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 endif # TARGET_USES_QCA_NFC
+
+# Defined the locales
+PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN ta_IN te_IN zh_HK \
+        in_ID my_MM km_KH sw_KE uk_UA pl_PL sr_RS sl_SI fa_IR kn_IN ml_IN ur_IN gu_IN or_IN
 
 # Add the overlay path
 ifeq ($(strip $(TARGET_USES_QTIC)),true)
