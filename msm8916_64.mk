@@ -49,7 +49,8 @@ PRODUCT_PACKAGES += libGLES_android
 
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
-    libqcompostprocbundle
+    libqcompostprocbundle \
+    libqcomvoiceprocessing
 
 # Audio configuration file
 PRODUCT_COPY_FILES += \
