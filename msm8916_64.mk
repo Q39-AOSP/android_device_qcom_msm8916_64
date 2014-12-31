@@ -128,9 +128,9 @@ endif
 
 #HBTP
 PRODUCT_PACKAGES += hbtp_daemon
-PRODUCT_PACKAGES += libhbtpclient.so
-PRODUCT_PACKAGES += libhbtpfrmwk.so
-PRODUCT_PACKAGES += libhbtparm.so
+PRODUCT_PACKAGES += libhbtpclient
+PRODUCT_PACKAGES += libhbtpfrmwk
+PRODUCT_PACKAGES += libhbtparm
 PRODUCT_PACKAGES += libafehal_5_rohm_v3.so
 PRODUCT_PACKAGES += hbtp_8939_5_rohm_v3.cfg
 PRODUCT_PACKAGES += hbtpcfg_8939_5_rohm_v3.dat
