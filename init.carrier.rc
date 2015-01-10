@@ -40,15 +40,13 @@ on post-fs-data
 
 ################################ CMCC APP ##################################
 # backupAppData
-service backupAppData /system/bin/sh /data/data/com.android.backup/cache/backupAppData.sh
-    user root
-    group root
+service backupAppData /system/bin/sh /system/vendor/bin/backupAppData.sh
+    seclabel u:r:backup_service:s0
     disabled
     oneshot
 
 # recoverAppData
-service recoverAppData /system/bin/sh /data/data/com.android.backup/cache/recoverAppData.sh
-    user root
-    group root
+service recoverAppData /system/bin/sh /system/vendor/bin/recoverAppData.sh
+    seclabel u:r:backup_service:s0
     disabled
     oneshot
