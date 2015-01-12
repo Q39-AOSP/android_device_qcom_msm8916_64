@@ -61,6 +61,11 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
+    mkdir /data/misc/hbtp 0766 system system
+    chown system system /sys/afe_properties/cfg_name
+    chown system system /sys/afe_properties/hallib_name
+    chown system system /sys/afe_properties/wake_up_enable
+
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -211,6 +216,6 @@ on charger
 
 service hbtp /system/vendor/bin/hbtp_daemon
     class main
-    user system
-    group system
+    user root
+    group root
     disabled
