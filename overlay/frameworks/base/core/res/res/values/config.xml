@@ -77,4 +77,7 @@
    <integer name="ascrollboost_schedboost">0x1E01</integer>
    <integer name="ascrollboost_cpuboost">0x20F</integer>
    <integer name="ascrollboost_pcdisbl">0x101</integer>
+
+   <!-- Enable button light -->
+   <bool name="config_button_light_enabled">true</bool>
 </resources>
