@@ -135,3 +135,6 @@ audio.dolby.ds2.enabled=true
 
 #HWUI properties
 ro.hwui.text_large_cache_height=2048
+
+# Enable DRM system property
+drm.service.enabled=1
