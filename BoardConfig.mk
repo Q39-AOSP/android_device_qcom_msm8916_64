@@ -115,3 +115,5 @@ ifneq ($(TARGET_USES_AOSP),true)
     endif
   endif
 endif
+# Enable sensor multi HAL
+USE_SENSOR_MULTI_HAL := true
