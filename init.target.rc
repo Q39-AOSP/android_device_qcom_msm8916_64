@@ -62,6 +62,7 @@ on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /data/misc/hbtp 0766 system system
+    mkdir /data/misc/dts 0770 media audio
     chown system system /sys/afe_properties/cfg_name
     chown system system /sys/afe_properties/hallib_name
     chown system system /sys/afe_properties/wake_up_enable
@@ -208,3 +209,9 @@ service hbtp /system/vendor/bin/hbtp_daemon
     user root
     group root
     disabled
+
+service dts_configurator /system/bin/dts_configurator
+    class main
+    user system
+    group system
+    oneshot
