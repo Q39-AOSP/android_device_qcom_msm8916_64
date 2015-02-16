@@ -1,4 +1,4 @@
-# Copyright (c) 2014, The Linux Foundation. All rights reserved.
+# Copyright (c) 2014-2015, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -62,6 +62,7 @@ on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     mkdir /data/misc/hbtp 0766 system system
+    mkdir /data/misc/dts 0770 media audio
     chown system system /sys/afe_properties/cfg_name
     chown system system /sys/afe_properties/hallib_name
     chown system system /sys/afe_properties/wake_up_enable
@@ -140,19 +141,6 @@ on boot
     start rmt_storage
     insmod /system/lib/modules/adsprpc.ko
 
-service ppd /system/bin/mm-pp-daemon
-    class late_start
-    disabled
-    user system
-    socket pps stream 0660 system system
-    group system graphics
-
-on property:init.svc.surfaceflinger=stopped
-    stop ppd
-
-on property:init.svc.surfaceflinger=running
-    start ppd
-
 service wcnss-service /system/bin/wcnss_service
     class main
     user system
@@ -221,3 +209,9 @@ service hbtp /system/vendor/bin/hbtp_daemon
     user root
     group root
     disabled
+
+service dts_configurator /system/bin/dts_configurator
+    class main
+    user system
+    group system
+    oneshot
