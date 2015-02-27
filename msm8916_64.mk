@@ -28,10 +28,12 @@ PRODUCT_DEVICE := msm8916_64
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8916 for arm64
 
+ifeq ($(strip $(TARGET_USES_QTIC)),true)
 # font rendering engine feature switch
 -include $(QCPATH)/common/config/rendering-engine.mk
 ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
     MULTI_LANG_ENGINE := REVERIE
+endif
 endif
 
 PRODUCT_BOOT_JARS += qcmediaplayer \
