@@ -139,7 +139,6 @@ PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN t
 # Add the overlay path
 ifeq ($(strip $(TARGET_USES_QTIC)),true)
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
-        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 endif
 
