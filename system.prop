@@ -168,3 +168,6 @@ ro.sys.fw.bservice_age=5000
 
 #Optimal dex2oat threads for faster app installation
 ro.sys.fw.dex2oat_thread_count=4
+#min/max cpu in core control
+ro.core_ctl_min_cpu=2
+ro.core_ctl_max_cpu=4
