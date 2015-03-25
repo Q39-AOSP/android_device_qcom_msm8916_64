@@ -143,19 +143,5 @@ PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 endif
 
-#HBTP
-PRODUCT_PACKAGES += hbtp_daemon
-PRODUCT_PACKAGES += hbtp_tool
-PRODUCT_PACKAGES += libhbtpclient
-PRODUCT_PACKAGES += libhbtpfrmwk
-PRODUCT_PACKAGES += libhbtparm
-PRODUCT_PACKAGES += libhbtptouchmgrjni
-PRODUCT_PACKAGES += hbtp_rohm_fhd_5_a230adev_np.cfg
-PRODUCT_PACKAGES += hbtp_rohm_fhd_5_a230adev_np.dat
-PRODUCT_PACKAGES += hbtp_rohm_fhd_6_a155adev_np.cfg
-PRODUCT_PACKAGES += hbtp_rohm_fhd_6_a155adev_np.dat
-PRODUCT_PACKAGES += hbtp_rohm_ql1500_np.cfg
-PRODUCT_PACKAGES += hbtp_rohm_ql1500_np.dat
-
 PRODUCT_SUPPORTS_VERITY := true
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
