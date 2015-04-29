@@ -161,3 +161,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 ro.sys.fw.bservice_enable=true
 ro.sys.fw.bservice_limit=5
 ro.sys.fw.bservice_age=5000
+
+#Optimal dex2oat threads for faster app installation
+ro.sys.fw.dex2oat_thread_count=4
