@@ -33,6 +33,7 @@ ifeq ($(strip $(TARGET_USES_QTIC)),true)
 -include $(QCPATH)/common/config/rendering-engine.mk
 ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
     MULTI_LANG_ENGINE := REVERIE
+#    MULTI_LANG_ZAWGYI := REVERIE
 endif
 endif
 
