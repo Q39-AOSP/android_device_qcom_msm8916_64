@@ -92,4 +92,4 @@ TARGET_LDPRELOAD := libNimsWrap.so
 TARGET_HW_DISK_ENCRYPTION := true
 
 #Enable SW based full disk encryption
-TARGET_SWV8_DISK_ENCRYPTION := true
+TARGET_SWV8_DISK_ENCRYPTION := false
