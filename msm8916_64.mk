@@ -11,8 +11,8 @@ DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
 
 # media_profiles and media_codecs xmls for 8916
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
-PRODUCT_COPY_FILES += device/qcom/msm8916_32/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
-                      device/qcom/msm8916_32/media/media_codecs_8916.xml:system/etc/media_codecs.xml \
+PRODUCT_COPY_FILES += device/qcom/common/media/media_profiles.xml:system/etc/media_profiles.xml \
+                      device/qcom/common/media/media_codecs.xml:system/etc/media_codecs.xml \
                       device/qcom/msm8916_32/media/media_codecs_8939.xml:system/etc/media_codecs_8939.xml \
                       device/qcom/msm8916_32/media/media_codecs_8929.xml:system/etc/media_codecs_8929.xml
 endif
