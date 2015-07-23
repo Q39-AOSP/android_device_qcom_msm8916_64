@@ -117,3 +117,5 @@ ifneq ($(TARGET_USES_AOSP),true)
 endif
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
+
+FEATURE_QCRIL_UIM_SAP_SERVER_MODE := true
