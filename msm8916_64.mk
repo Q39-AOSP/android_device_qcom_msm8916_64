@@ -42,7 +42,8 @@ endif
                      qcom.fmradio \
                      oem-services
 #PRODUCT_BOOT_JARS += vcard
-#PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += com.qti.dpmframework
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
