@@ -8,6 +8,6 @@
 #<src>                                                <mnt_point>  <type>  <mnt_flags and options>                     <fs_mgr_flags>
 /dev/block/bootdevice/by-name/system         /system      ext4    ro,barrier=1,discard                                wait
 /dev/block/bootdevice/by-name/userdata       /data        ext4    nosuid,nodev,barrier=1,noauto_da_alloc,discard      wait,check,encryptable=footer
-/devices/soc.0/7864900.sdhci/mmc_host/mmc1/mmc1:59b4/block/mmcblk1      /storage/sdcard1   vfat    nosuid,nodev         wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=footer
+/devices/soc.0/7864900.sdhci/mmc_host*      /storage/sdcard1   vfat    nosuid,nodev         wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=footer
 /dev/block/zram0             none         swap    defaults zramsize=536870912
 /dev/block/bootdevice/by-name/config         /persistent  emmc  defaults defaults
