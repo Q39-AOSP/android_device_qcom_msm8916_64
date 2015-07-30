@@ -145,3 +145,5 @@ endif
 
 PRODUCT_SUPPORTS_VERITY := true
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
+
+GMS_ENABLE_OPTIONAL_MODULES := false
