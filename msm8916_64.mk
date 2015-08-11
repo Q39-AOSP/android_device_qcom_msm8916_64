@@ -41,7 +41,11 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 
 #PRODUCT_BOOT_JARS += vcard
 PRODUCT_BOOT_JARS += tcmiface
+
+ifneq ($(strip $(QCPATH)),)
 PRODUCT_BOOT_JARS += com.qti.dpmframework
+PRODUCT_BOOT_JARS += dpmapi
+endif
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
