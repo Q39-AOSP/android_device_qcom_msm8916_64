@@ -33,27 +33,36 @@
        for long messages. -->
 <!-- <bool name="config_ascii_7bit_support_for_long_message">true</bool> -->
    <!-- Whether cpu boost is enabled for overscroller fling. -->
-<!--   <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
-   <integer name="flingboost_schedboost_param">0x1E01</integer>
-   <integer name="flingboost_cpuboost_param">0x20D</integer>
-   <integer name="flingboost_preferidle_param">0x3E01</integer> -->
+   <bool name="config_enableCpuBoostForOverScrollerFling">true</bool>
+   <integer-array name="flingboost_param_value">
+       <item>0x1E01</item> <!-- SCHEDBOOST resource -->
+       <item>0x020D</item> <!-- CPUBOOST_MIN_FREQ resource -->
+       <item>0x3E01</item> <!-- SCHED_PREFER_IDLE resource -->
+   </integer-array>
    <!-- Whether cpu boost is enabled for horizontal scroll. -->
-<!--   <bool name="config_enableCpuBoostForScroller">true</bool>
-   <integer name="scrollboost_schedboost_param">0x1E01</integer>
-   <integer name="scrollboost_cpuboost_param">0x20D</integer>
-   <integer name="scrollboost_preferidle_param">0x3E01</integer> -->
+   <bool name="config_enableCpuBoostForScroller">true</bool>
+   <integer-array name="scrollboost_param_value">
+       <item>0x1E01</item> <!-- SCHEDBOOST resource -->
+       <item>0x020D</item> <!-- CPUBOOST_MIN_FREQ resource -->
+       <item>0x3E01</item> <!-- SCHED_PREFER_IDLE resource -->
+   </integer-array>
    <!-- Whether cpu boost is enabled for application's 1st launch. -->
-<!--   <bool name="config_enableCpuBoostForAppLaunch">true</bool>
+   <bool name="config_enableCpuBoostForAppLaunch">true</bool>
    <integer name="launchboost_timeout_param">2000</integer>
-   <integer name="launchboost_schedboost_param">0x1E01</integer>
-   <integer name="launchboost_cpuboost_param">0x20F</integer>
-   <integer name="launchboost_pcdisbl_param">0x101</integer>
-   <integer name="launchboost_ksmboost_param">0x1C00</integer> -->
+   <integer-array name="launchboost_param_value">
+       <item>0x1E01</item> <!-- SCHEDBOOST resource -->
+       <item>0x020F</item> <!-- CPUBOOST_MIN_FREQ resource -->
+       <item>0x0101</item> <!-- DISABLE_POWER_COLLAPSE resource -->
+<!--   <item>    </item> Minimum number of cores online resource -->
+       <item>0x1C00</item> <!-- KSMBOOST resource -->
+   </integer-array>
    <!-- Whether cpu boost is enabled for animation during exit and entry -->
-<!--   <bool name="config_enablePerfBoostForAnimation">true</bool>
-   <integer name="animationboost_schedboost_param">0x1E01</integer>
-   <integer name="animationboost_cpuboost_param">0x20B</integer>
-   <integer name="animationboost_timeout_param">600</integer> -->
+   <bool name="config_enablePerfBoostForAnimation">true</bool>
+   <integer name="animationboost_timeout_param">600</integer>
+   <integer-array name="animationboost_param_value">
+       <item>0x1E01</item> <!-- SCHEDBOOST resource -->
+       <item>0x020B</item> <!-- CPUBOOST_MIN_FREQ resource -->
+   </integer-array>
    <!-- Indicate whether to allow the device to suspend when the screen is off
    due to the proximity sensor.  This resource should only be set to true
    if the sensor HAL correctly handles the proximity sensor as a wake-up source.
@@ -64,19 +73,21 @@
    <!-- Config determines whether to update phone object when voice registration
    state changes. Voice radio tech change will always trigger an update of
    phone object irrespective of this config -->
-<!-- <bool name="config_switch_phone_on_voice_reg_state_change">false</bool> -->
+   <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
 
    <!-- Activities list for boost -->
-<!--   <string-array translatable="false" name="boost_activityList">
+   <string-array translatable="false" name="boost_activityList">
         <item>chrome</item>
         <item>browser</item>
-   </string-array> -->
+   </string-array>
 
    <!-- Activity scroll boost params -->
-<!--   <integer name="ascrollboost_timeout">17</integer>
-   <integer name="ascrollboost_schedboost">0x1E01</integer>
-   <integer name="ascrollboost_cpuboost">0x20F</integer>
-   <integer name="ascrollboost_pcdisbl">0x101</integer> -->
+   <integer name="ascrollboost_timeout">17</integer>
+   <integer-array name="ascrollboost_param_value">
+       <item>0x1E01</item> <!-- SCHEDBOOST resource -->
+       <item>0x020F</item> <!-- CPUBOOST_MIN_FREQ resource -->
+       <item>0x0101</item> <!-- DISABLE_POWER_COLLAPSE resource -->
+   </integer-array>
 
    <!-- Enable button light -->
 <!--   <bool name="config_button_light_enabled">true</bool> -->
