@@ -100,7 +100,7 @@ TARGET_LDPRELOAD := libNimsWrap.so
 TARGET_HW_DISK_ENCRYPTION := false
 
 #Enable SW based full disk encryption
-TARGET_SWV8_DISK_ENCRYPTION := true
+TARGET_SWV8_DISK_ENCRYPTION := false
 
 # Enable dex pre-opt to speed up initial boot
 ifneq ($(TARGET_USES_AOSP),true)

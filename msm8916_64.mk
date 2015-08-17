@@ -152,3 +152,5 @@ PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/sensors/hals.conf:system/etc/sensors/hals.conf
+
+GMS_ENABLE_OPTIONAL_MODULES := false
