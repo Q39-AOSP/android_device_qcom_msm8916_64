@@ -47,6 +47,8 @@ PRODUCT_BOOT_JARS += com.qti.dpmframework
 PRODUCT_BOOT_JARS += dpmapi
 endif
 
+PRODUCT_BOOT_JARS += WfdCommon
+
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
 
