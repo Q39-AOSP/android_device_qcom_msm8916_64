@@ -100,6 +100,8 @@ TARGET_HW_DISK_ENCRYPTION := false
 #Enable SW based full disk encryption
 TARGET_SWV8_DISK_ENCRYPTION := false
 
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+
 # Enable dex pre-opt to speed up initial boot
 ifneq ($(TARGET_USES_AOSP),true)
   ifeq ($(HOST_OS),linux)
