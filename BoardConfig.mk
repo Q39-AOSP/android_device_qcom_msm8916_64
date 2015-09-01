@@ -102,19 +102,6 @@ TARGET_SWV8_DISK_ENCRYPTION := false
 
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
-# Enable dex pre-opt to speed up initial boot
-ifneq ($(TARGET_USES_AOSP),true)
-  ifeq ($(HOST_OS),linux)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-      WITH_DEXPREOPT_PIC := true
-      ifneq ($(TARGET_BUILD_VARIANT),user)
-      # Retain classes.dex in APK's for non-user builds
-      DEX_PREOPT_DEFAULT := nostripping
-      endif
-    endif
-  endif
-endif
 # Enable sensor multi HAL
 USE_SENSOR_MULTI_HAL := true
 
