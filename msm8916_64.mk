@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += device/qcom/msm8916_32/media/media_profiles_8916.xml:syste
 endif
 
 TARGET_USES_QCA_NFC := other
+TARGET_USES_NQ_NFC := false
 
 PRODUCT_PROPERTY_OVERRIDES += \
            dalvik.vm.heapgrowthlimit=128m
@@ -144,6 +145,24 @@ PRODUCT_COPY_FILES += \
         frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
         frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
         frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+else
+ifeq ($(TARGET_USES_NQ_NFC),true)
+PRODUCT_PACKAGES += \
+    nfc.msm8916_64 \
+    NfcNci \
+    libnfc-nci \
+    libnfc_nci_jni \
+    nfc_nci.nqx.default \
+    Tag \
+    com.android.nfc_extras
+
+PRODUCT_COPY_FILES += \
+    packages/apps/Nfc/migrate_nfc.txt:system/etc/updatecmds/migrate_nfc.txt \
+    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
+    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
+endif # TARGET_USES_NQ_NFC
 endif # TARGET_USES_QCA_NFC
 
 # Defined the locales
