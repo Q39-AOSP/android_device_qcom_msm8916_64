@@ -34,8 +34,8 @@ on early-init
     mkdir /system 0777 root root
     symlink /data/tombstones /tombstones
 
-on post-fs
-    export LD_PRELOAD libNimsWrap.so
+#on post-fs
+#    export LD_PRELOAD libNimsWrap.so
 
 on fs
     wait /dev/block/bootdevice
@@ -154,11 +154,11 @@ on boot
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0070/secure_touch_enable
     chown system drmrpc /sys/devices/soc.0/78b9000.i2c/i2c-5/5-0070/secure_touch
 
-service wcnss-service /system/bin/wcnss_service
-    class main
-    user system
-    group system wifi radio
-    oneshot
+#service wcnss-service /system/bin/wcnss_service
+#    class main
+#    user system
+#    group system wifi radio
+#    oneshot
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main

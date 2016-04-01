@@ -1,10 +1,8 @@
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
 
 TARGET_USES_QCOM_BSP := true
 # Add QC Video Enhancements flag
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
+#TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
@@ -41,20 +39,20 @@ ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
 endif
 endif
 
-PRODUCT_BOOT_JARS += qcom.fmradio
+#PRODUCT_BOOT_JARS += qcom.fmradio
 
 #PRODUCT_BOOT_JARS += vcard
-PRODUCT_BOOT_JARS += tcmiface
-PRODUCT_BOOT_JARS += qcmediaplayer
+#PRODUCT_BOOT_JARS += tcmiface
+#PRODUCT_BOOT_JARS += qcmediaplayer
 
 ifneq ($(strip $(QCPATH)),)
-PRODUCT_BOOT_JARS += com.qti.dpmframework
-PRODUCT_BOOT_JARS += dpmapi
-PRODUCT_BOOT_JARS += oem-services
-PRODUCT_BOOT_JARS += com.qti.location.sdk
+#PRODUCT_BOOT_JARS += com.qti.dpmframework
+#PRODUCT_BOOT_JARS += dpmapi
+#PRODUCT_BOOT_JARS += oem-services
+#PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
 
-PRODUCT_BOOT_JARS += WfdCommon
+#PRODUCT_BOOT_JARS += WfdCommon
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
