@@ -13,6 +13,7 @@ TARGET_USES_AOSP := true
 USE_CLANG_PLATFORM_BUILD := true
 BOARD_USES_GENERIC_AUDIO := true
 USE_CAMERA_STUB := true
+TARGET_DISABLE_DASH := true
 
 -include $(QCPATH)/common/msm8916/BoardConfigVendor.mk
 
