@@ -39,7 +39,7 @@ ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
 endif
 endif
 
-#PRODUCT_BOOT_JARS += qcom.fmradio
+PRODUCT_BOOT_JARS += qcom.fmradio
 
 #PRODUCT_BOOT_JARS += vcard
 #PRODUCT_BOOT_JARS += tcmiface
