@@ -60,6 +60,8 @@ PRODUCT_CHARACTERISTICS := nosdcard
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 
+-include $(TOPDIR)hardware/qcom/audio/configs/msm8916/msm8916.mk
+
 PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcompostprocbundle \
