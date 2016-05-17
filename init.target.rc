@@ -40,6 +40,7 @@ on early-init
 on fs
     wait /dev/block/bootdevice
     mount_all fstab.qcom
+    write /proc/sys/vm/swappiness 100
 
     # Keeping following partitions outside fstab file. As user may not have
     # these partition flashed on the device. Failure to mount any partition in fstab file
@@ -80,11 +81,6 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
 
 on init
    write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
-
-#enable zram
-on property:ro.config.zram=true
-    swapon_all fstab.qcom
-    write /proc/sys/vm/swappiness 100
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
