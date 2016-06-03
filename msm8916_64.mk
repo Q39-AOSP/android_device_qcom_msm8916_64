@@ -45,6 +45,11 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 PRODUCT_BOOT_JARS += tcmiface
 #PRODUCT_BOOT_JARS += qcmediaplayer
 
+# QTI extended functionality of android telephony.
+# Required for MSIM manual provisioning and other related features.
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
+
 ifneq ($(strip $(QCPATH)),)
 #PRODUCT_BOOT_JARS += com.qti.dpmframework
 #PRODUCT_BOOT_JARS += dpmapi
