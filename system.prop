@@ -125,6 +125,9 @@ voice.playback.conc.disabled=true
 voice.record.conc.disabled=true
 voice.voip.conc.disabled=true
 
+#property to enable image unload by audio HAL
+sys.audio.init=false
+
 #Set composition for USB
 persist.sys.usb.config=diag,serial_smd,rmnet_bam,adb
 
