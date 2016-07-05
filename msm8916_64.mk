@@ -59,7 +59,7 @@ ifneq ($(strip $(QCPATH)),)
 #PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
 
-#PRODUCT_BOOT_JARS += WfdCommon
+PRODUCT_BOOT_JARS += WfdCommon
 
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
