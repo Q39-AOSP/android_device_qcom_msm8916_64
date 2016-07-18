@@ -16,8 +16,10 @@ persist.rild.nitz_short_ons_3=
 persist.radio.rat_on=combine
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-# Start in cdma mode
-ro.telephony.default_network=5
+#
+# Set network mode to (T/L/G/W/1X/EVDO, G) for DSDS mode
+#
+ro.telephony.default_network=22,1
 
 debug.sf.hw=0
 debug.egl.hw=0
