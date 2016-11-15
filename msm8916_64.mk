@@ -44,7 +44,6 @@ ifneq (,$(strip $(wildcard $(PRODUCT_RENDERING_ENGINE_REVLIB))))
 #    MULTI_LANG_ZAWGYI := REVERIE
 endif
 
-
 PRODUCT_BOOT_JARS += qcom.fmradio
 
 #PRODUCT_BOOT_JARS += vcard
@@ -109,14 +108,13 @@ PRODUCT_PACKAGES += \
 
 # Defined the locales
 PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN ta_IN te_IN zh_HK \
-        in_ID my_MM km_KH sw_KE uk_UA pl_PL sr_RS sl_SI fa_IR kn_IN ml_IN ur_IN gu_IN or_IN
+        in_ID my_MM km_KH sw_KE uk_UA pl_PL sr_RS sl_SI fa_IR kn_IN ml_IN ur_IN gu_IN or_IN zh_CN
 
 # When can normal compile this module,  need module owner enable below commands
 # Add the overlay path
-#PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
-#        $(PRODUCT_PACKAGE_OVERLAYS)
 
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
+        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
 
 PRODUCT_SUPPORTS_VERITY := true
