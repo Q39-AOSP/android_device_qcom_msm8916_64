@@ -114,8 +114,8 @@ PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN t
 # Add the overlay path
 
 PRODUCT_PACKAGE_OVERLAYS := $(QCPATH)/qrdplus/Extension/res \
-        $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
         $(PRODUCT_PACKAGE_OVERLAYS)
+#       $(QCPATH)/qrdplus/globalization/multi-language/res-overlay \
 
 PRODUCT_SUPPORTS_VERITY := true
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
