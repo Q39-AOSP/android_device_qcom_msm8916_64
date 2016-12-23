@@ -225,4 +225,4 @@ service dts_configurator /system/bin/dts_configurator
 service per_mgr /system/bin/pm-service
     class core
     user system
-    group system net_raw
+    group system
