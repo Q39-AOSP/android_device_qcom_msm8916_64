@@ -14,6 +14,9 @@ PRODUCT_PACKAGES += \
 # Enable features in video HAL that can compile only on this platform
 TARGET_USES_MEDIA_EXTENSIONS := true
 
+# qcom shell
+PRODUCT_COPY_FILES += device/tcl/q39/init.qcom.power.sh:system/etc/init.qcom.power.sh
+
 # media_profiles and media_codecs xmls for 8916
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
 PRODUCT_COPY_FILES += device/qcom/msm8916_32/media/media_profiles_8916.xml:system/etc/media_profiles.xml \
