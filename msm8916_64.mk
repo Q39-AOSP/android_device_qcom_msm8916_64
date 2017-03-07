@@ -15,7 +15,37 @@ PRODUCT_PACKAGES += \
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # qcom shell
-PRODUCT_COPY_FILES += device/tcl/q39/init.qcom.power.sh:system/etc/init.qcom.power.sh
+PRODUCT_PACKAGES += \
+    init.qcom.power.sh \
+    init.qcom.debug.sh \
+    init.ath3k.bt.sh \
+    init.crda.sh \
+    init.qcom.audio.sh \
+    init.qcom.bt.sh \
+    init.qcom.coex.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.fm.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.uicc.sh \
+    init.qcom.wifi.sh \
+    init.qcom.zram.sh
+
+# root
+PRODUCT_PACKAGES += \
+    init.target.rc \
+    init.carrier.rc \
+    init.qcom.usb.rc \
+    init.rc \
+    init.trace.rc \
+    init.usb.rc \
+    init.zygote32.rc \
+    init.zygote64_32.rc \
+    init.qcom.usb.sh \
+    fstab.qcom \
+    init.qcom.class_core.sh \
+    init.qcom.sh \
+    init.qcom.syspart_fixup.sh
 
 # media_profiles and media_codecs xmls for 8916
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
