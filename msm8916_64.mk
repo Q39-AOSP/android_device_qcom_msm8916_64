@@ -1,4 +1,4 @@
-DEVICE_PACKAGE_OVERLAYS := device/tcl/q39/overlay
+DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
 
 TARGET_USES_QCOM_BSP := true
 # Add QC Video Enhancements flag
@@ -126,14 +126,14 @@ PRODUCT_PACKAGES += wcnss_service
 
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
-    device/tcl/q39/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
+    device/qcom/msm8916_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
 #wlan driver
 PRODUCT_COPY_FILES += \
-    device/tcl/q39/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/tcl/q39/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/tcl/q39/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
-    device/tcl/q39/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+    device/qcom/msm8916_64/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/qcom/msm8916_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/qcom/msm8916_64/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
+    device/qcom/msm8916_64/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
@@ -163,6 +163,6 @@ PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/bootdevice/by-name/system
 
 # Sensor HAL conf file
 PRODUCT_COPY_FILES += \
-    device/tcl/q39/sensors/hals.conf:system/etc/sensors/hals.conf
+    device/qcom/msm8916_64/sensors/hals.conf:system/etc/sensors/hals.conf
 
 GMS_ENABLE_OPTIONAL_MODULES := false
