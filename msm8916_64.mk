@@ -161,10 +161,19 @@ PRODUCT_COPY_FILES += \
 
 #wlan driver
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8916_64/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    device/qcom/msm8916_64/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/qcom/msm8916_64/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
-    device/qcom/msm8916_64/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+    device/qcom/msm8916_64/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    device/qcom/msm8916_64/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    device/qcom/msm8916_64/wifi/WCNSS_wlan_dictionary.dat:persist/WCNSS_wlan_dictionary.dat \
+    device/qcom/msm8916_64/wifi/WCNSS_qcom_wlan_nv.bin:persist/WCNSS_qcom_wlan_nv.bin
+
+ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/qcom/msm8916_64/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    device/qcom/msm8916_64/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
+    device/qcom/msm8916_64/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
+    device/qcom/msm8916_64/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny
+endif
 
 PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf \
