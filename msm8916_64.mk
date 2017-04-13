@@ -128,6 +128,13 @@ PRODUCT_PACKAGES += wcnss_service
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    device/qcom/msm8916_64/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    device/qcom/msm8916_64/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \
+    device/qcom/msm8916_64/keylayout/synaptics_rmi4_i2c.kl:system/usr/keylayout/synaptics_rmi4_i2c.kl
+    
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
