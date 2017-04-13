@@ -168,7 +168,7 @@ PRODUCT_COPY_FILES += \
 
 ifeq ($(strip $(BOARD_HAS_QCOM_WLAN)),true)
 PRODUCT_COPY_FILES += \
-    device/qcom/msm8916_64/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    device/qcom/msm8916_64/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     device/qcom/msm8916_64/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     device/qcom/msm8916_64/wifi/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
     device/qcom/msm8916_64/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
@@ -176,8 +176,6 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_PACKAGES += \
-    wpa_supplicant_overlay.conf \
-    p2p_supplicant_overlay.conf \
     wpa_supplicant
 
 # logwrapper
