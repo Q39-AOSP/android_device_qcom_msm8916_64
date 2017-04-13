@@ -178,13 +178,50 @@ endif
 PRODUCT_PACKAGES += \
     wpa_supplicant
 
+# dhcpcd
+PRODUCT_PACKAGES += \
+    dhcpcd-6.8.2
+
+# debuggerd
+PRODUCT_PACKAGES += \
+    debuggerd \
+    debuggerd64
+
+# sdcard
+PRODUCT_PACKAGES += \
+    sdcard
+
 # logwrapper
 PRODUCT_PACKAGES += \
     logwrapper
 
+# mdnsd
+PRODUCT_PACKAGES += \
+    mdnsd
+
+# keystore
+PRODUCT_PACKAGES += \
+    keystore
+
+# healthd
+PRODUCT_PACKAGES += \
+    healthd
+
 # rild
 PRODUCT_PACKAGES += \
     rild
+
+# init
+PRODUCT_PACKAGES += \
+    init
+
+# mtpd
+PRODUCT_PACKAGES += \
+    mtpd
+
+# logd
+PRODUCT_PACKAGES += \
+    logd
 
 # Defined the locales
 PRODUCT_LOCALES += th_TH vi_VN tl_PH hi_IN ar_EG ru_RU tr_TR pt_BR bn_IN mr_IN ta_IN te_IN zh_HK \
