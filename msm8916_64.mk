@@ -159,6 +159,111 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/config/acdbdata/QRD/QRD_Headset_cal.acdb:system/etc/acdbdata/QRD/QRD_Headset_cal.acdb \
     device/qcom/msm8916_64/config/acdbdata/QRD/QRD_Speaker_cal.acdb:system/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
+# firmware
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/firmware/wcd9306/wcd9306_anc.bin:system/etc/firmware/wcd9306/wcd9306_anc.bin \
+    device/qcom/msm8916_64/config/firmware/wcd9306/wcd9306_mbhc.bin:system/etc/firmware/wcd9306/wcd9306_mbhc.bin \
+    device/qcom/msm8916_64/config/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
+    device/qcom/msm8916_64/config/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
+    device/qcom/msm8916_64/config/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
+    device/qcom/msm8916_64/config/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
+    device/qcom/msm8916_64/config/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
+    device/qcom/msm8916_64/config/firmware/a330_pfp.fw:system/etc/firmware/a330_pfp.fw \
+    device/qcom/msm8916_64/config/firmware/a330_pm4.fw:system/etc/firmware/a330_pm4.fw \
+    device/qcom/msm8916_64/config/firmware/a420_pfp.fw:system/etc/firmware/a420_pfp.fw \
+    device/qcom/msm8916_64/config/firmware/a420_pm4.fw:system/etc/firmware/a420_pm4.fw \
+    device/qcom/msm8916_64/config/firmware/cpp_firmware_v1_1_1.fw:system/etc/firmware/cpp_firmware_v1_1_1.fw \
+    device/qcom/msm8916_64/config/firmware/cpp_firmware_v1_1_6.fw:system/etc/firmware/cpp_firmware_v1_1_6.fw \
+    device/qcom/msm8916_64/config/firmware/cpp_firmware_v1_2_0.fw:system/etc/firmware/cpp_firmware_v1_2_0.fw \
+    device/qcom/msm8916_64/config/firmware/cpp_firmware_v1_4_0.fw:system/etc/firmware/cpp_firmware_v1_4_0.fw \
+    device/qcom/msm8916_64/config/firmware/ice40.bin:system/etc/firmware/ice40.bin \
+    device/qcom/msm8916_64/config/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
+    device/qcom/msm8916_64/config/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
+    device/qcom/msm8916_64/config/firmware/Signedrompatch_v20.bin:system/etc/firmware/Signedrompatch_v20.bin \
+    device/qcom/msm8916_64/config/firmware/Signedrompatch_v21.bin:system/etc/firmware/Signedrompatch_v21.bin \
+    device/qcom/msm8916_64/config/firmware/Signedrompatch_v24.bin:system/etc/firmware/Signedrompatch_v24.bin \
+    device/qcom/msm8916_64/config/firmware/Signedrompatch_v30.bin:system/etc/firmware/Signedrompatch_v30.bin \
+    device/qcom/msm8916_64/config/firmware/venus.b00:system/etc/firmware/venus.b00 \
+    device/qcom/msm8916_64/config/firmware/venus.b01:system/etc/firmware/venus.b01 \
+    device/qcom/msm8916_64/config/firmware/venus.b02:system/etc/firmware/venus.b02 \
+    device/qcom/msm8916_64/config/firmware/venus.b03:system/etc/firmware/venus.b03 \
+    device/qcom/msm8916_64/config/firmware/venus.b04:system/etc/firmware/venus.b04 \
+    device/qcom/msm8916_64/config/firmware/venus.mbn:system/etc/firmware/venus.mbn \
+    device/qcom/msm8916_64/config/firmware/venus.mdt:system/etc/firmware/venus.mdt
+
+# cacert
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/cacert_location.pem:system/etc/cacert_location.pem
+
+# config
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/capability.xml:system/etc/capability.xml \
+    device/qcom/msm8916_64/config/cdma_call_conf.xml:system/etc/cdma_call_conf.xml \
+    device/qcom/msm8916_64/config/ftm_test_config:system/etc/ftm_test_config \
+    device/qcom/msm8916_64/config/ftm_test_config_mtp:system/etc/ftm_test_config_mtp \
+    device/qcom/msm8916_64/config/ftm_test_config_wcd9306:system/etc/ftm_test_config_wcd9306 \
+    device/qcom/msm8916_64/config/lowi.conf:system/etc/lowi.conf \
+    device/qcom/msm8916_64/config/qmi_fw.conf:system/etc/qmi_fw.conf \
+    device/qcom/msm8916_64/config/spn-conf.xml:system/etc/spn-conf.xml \
+    device/qcom/msm8916_64/config/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
+    device/qcom/msm8916_64/config/wfdconfig.xml:system/etc/wfdconfig.xml \
+    device/qcom/msm8916_64/config/xtra_root_cert.pem:system/etc/xtra_root_cert.pem \
+    device/qcom/msm8916_64/config/xtwifi.conf:system/etc/xtwifi.conf \
+    device/qcom/msm8916_64/config/apns-conf.xml:system/etc/apns-conf.xml
+
+# surround sound
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/surround_sound/filter1i.pcm:system/etc/surround_sound/filter1i.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter1r.pcm:system/etc/surround_sound/filter1r.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter2i.pcm:system/etc/surround_sound/filter2i.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter2r.pcm:system/etc/surround_sound/filter2r.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter3i.pcm:system/etc/surround_sound/filter3i.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter3r.pcm:system/etc/surround_sound/filter3r.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter4i.pcm:system/etc/surround_sound/filter4i.pcm \
+    device/qcom/msm8916_64/config/surround_sound/filter4r.pcm:system/etc/surround_sound/filter4r.pcm
+
+# cne
+PRODUCT_COPY_FILES += \
+    device/tcl/q39/config/cne/andsfCne.xml:system/etc/cne/andsfCne.xml \
+    device/tcl/q39/config/cne/SwimConfig.xml:system/etc/cne/SwimConfig.xml \
+    device/tcl/q39/config/cne/wqeclient/profile1.xml:system/etc/cne/wqeclient/profile1.xml \
+    device/tcl/q39/config/cne/wqeclient/profile2.xml:system/etc/cne/wqeclient/profile2.xml \
+    device/tcl/q39/config/cne/wqeclient/profile3.xml:system/etc/cne/wqeclient/profile3.xml \
+    device/tcl/q39/config/cne/wqeclient/profile4.xml:system/etc/cne/wqeclient/profile4.xml \
+    device/tcl/q39/config/cne/wqeclient/profile5.xml:system/etc/cne/wqeclient/profile5.xml
+
+# dpm
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/dpm/dpm.conf:system/etc/dpm/dpm.conf \
+    device/qcom/msm8916_64/config/dpm/nsrm/NsrmConfiguration.xml:system/etc/dpm/nsrm/NsrmConfiguration.xml
+
+# mmi
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/mmi/fail.png:system/etc/mmi/fail.png \
+    device/qcom/msm8916_64/config/mmi/fonts.ttf:system/etc/mmi/fonts.ttf \
+    device/qcom/msm8916_64/config/mmi/pass.png:system/etc/mmi/pass.png \
+    device/qcom/msm8916_64/config/mmi/strings.xml:system/etc/mmi/strings.xml \
+    device/qcom/msm8916_64/config/mmi/strings-zh-rCN.xml:system/etc/mmi/strings-zh-rCN.xml
+
+# permissions
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8916_64/config/permissions/btmultisim.xml:system/etc/permissions/btmultisim.xml \
+    device/qcom/msm8916_64/config/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
+    device/qcom/msm8916_64/config/permissions/com.qrd.wappush.xml:system/etc/permissions/com.qrd.wappush.xml \
+    device/qcom/msm8916_64/config/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
+    device/qcom/msm8916_64/config/permissions/com.qti.snapdragon.sdk.display.xml:system/etc/permissions/com.qti.snapdragon.sdk.display.xml \
+    device/qcom/msm8916_64/config/permissions/com.qualcomm.qmapbridge.xml:system/etc/permissions/com.qualcomm.qmapbridge.xml \
+    device/qcom/msm8916_64/config/permissions/com.qualcomm.qti.smartsearch.xml:system/etc/permissions/com.qualcomm.qti.smartsearch.xml \
+    device/qcom/msm8916_64/config/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
+    device/qcom/msm8916_64/config/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
+    device/qcom/msm8916_64/config/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
+    device/qcom/msm8916_64/config/permissions/embms.xml:system/etc/permissions/embms.xml \
+    device/qcom/msm8916_64/config/permissions/imscm.xml:system/etc/permissions/imscm.xml \
+    device/qcom/msm8916_64/config/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
+    device/qcom/msm8916_64/config/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+    device/qcom/msm8916_64/config/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
+    device/qcom/msm8916_64/config/permissions/rcsimssettings.xml:system/etc/permissions/rcsimssettings.xml
+    
 #wlan driver
 PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
