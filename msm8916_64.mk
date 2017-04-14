@@ -1,8 +1,15 @@
 DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8916_64/overlay
+QC_PROP_ROOT := vendor/qcom/msm8916_64
 
 TARGET_USES_QCOM_BSP := true
 # Add QC Video Enhancements flag
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
+ifeq ($(strip $(TARGET_BOARD_SUFFIX)),)
+    PREBUILT_BOARD_PLATFORM_DIR := $(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX)
+else
+    PREBUILT_BOARD_PLATFORM_DIR := $(TARGET_BOARD_PLATFORM)
+endif
 
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
@@ -17,35 +24,15 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # qcom shell
 PRODUCT_PACKAGES += \
     init.qcom.power.sh \
-    init.qcom.debug.sh \
-    init.ath3k.bt.sh \
-    init.crda.sh \
-    init.qcom.audio.sh \
-    init.qcom.bt.sh \
-    init.qcom.coex.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.fm.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sdio.sh \
-    init.qcom.uicc.sh \
-    init.qcom.wifi.sh \
     init.qcom.zram.sh
 
 # root
 PRODUCT_PACKAGES += \
     init.target.rc \
     init.carrier.rc \
-    init.qcom.usb.rc \
     init.rc \
     init.trace.rc \
-    init.usb.rc \
-    init.zygote32.rc \
-    init.zygote64_32.rc \
-    init.qcom.usb.sh \
-    fstab.qcom \
-    init.qcom.class_core.sh \
-    init.qcom.sh \
-    init.qcom.syspart_fixup.sh
+    fstab.qcom
 
 # media_profiles and media_codecs xmls for 8916
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
@@ -346,3 +333,10 @@ PRODUCT_COPY_FILES += \
     device/qcom/msm8916_64/sensors/hals.conf:system/etc/sensors/hals.conf
 
 GMS_ENABLE_OPTIONAL_MODULES := false
+
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/tcl/q39/q39-vendor.mk)
+
+$(call inherit-product-if-exists, $(QC_PROP_ROOT)/prebuilt_HY22/Android.mk)
+
+$(call inherit-product-if-exists, $(QC_PROP_ROOT)/prebuilt_HY22/target/product/$(PREBUILT_BOARD_PLATFORM_DIR)/prebuilt.mk)
