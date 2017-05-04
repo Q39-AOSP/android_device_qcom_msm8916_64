@@ -30,8 +30,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.target.rc \
     init.carrier.rc \
-    init.rc \
-    init.trace.rc \
     fstab.qcom
 
 # media_profiles and media_codecs xmls for 8916
