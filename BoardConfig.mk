@@ -172,9 +172,16 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 BOARD_EGL_CFG := device/tcl/q39/egl.cfg
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Add NON-HLOS files for ota upgrade
-ADD_RADIO_FILES := true
+#ADD_RADIO_FILES := true
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
 TARGET_INIT_VENDOR_LIB := libinit_msm
+
+# TWRP
+TW_THEME := portrait_hdpi
+DEVICE_RESOLUTION := 1080x1920
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_EXTRA_LANGUAGES := true
+TW_DEFAULT_LANGUAGE := zh_CN
 
 #add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _64
