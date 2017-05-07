@@ -162,7 +162,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_CUSTOM_BOOTIMG_MK := device/tcl/q39/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 TARGET_KERNEL_VERSION := 3.10
-
+KERNEL_TO_BUILD_ROOT_OFFSET := $(TOP)/
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
 # Increase the size if shaders of size greater than 12KB are used.
