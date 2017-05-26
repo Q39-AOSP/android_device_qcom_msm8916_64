@@ -169,12 +169,13 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
 
-BOARD_EGL_CFG := device/tcl/q39/egl.cfg
+BOARD_EGL_CFG := device/qcom/msm8916_64/egl.cfg
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Add NON-HLOS files for ota upgrade
 #ADD_RADIO_FILES := true
 TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_msm
 TARGET_INIT_VENDOR_LIB := libinit_msm
+TARGET_RECOVERY_FSTAB := device/qcom/msm8916_64/recovery/twrp.fstab
 
 # TWRP
 TW_THEME := portrait_hdpi
