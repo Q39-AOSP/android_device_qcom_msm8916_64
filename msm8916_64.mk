@@ -32,6 +32,9 @@ PRODUCT_BOOT_JARS += tcmiface
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# qcom shell
+PRODUCT_COPY_FILES += device/tcl/q39/init.qcom.power.sh:system/etc/init.qcom.power.sh
+
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
 

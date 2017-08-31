@@ -197,3 +197,16 @@ on charger
     start vm_bms
     load_all_props
     start qcom-post-boot
+    class_start charger
+
+service power_engine /system/bin/sh /system/etc/init.qcom.power.sh
+    class late_start
+    user root
+    group root
+    disabled
+
+on property:persist.sys.power_ctrl=1
+    start power_engine
+
+on property:persist.sys.power_ctrl=0
+    stop power_engine
